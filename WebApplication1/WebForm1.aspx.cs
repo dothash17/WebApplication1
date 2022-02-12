@@ -27,21 +27,6 @@ namespace WebApplication1
                     output = double.Parse(a) + double.Parse(b);
                     Result.Text = "Ответ: " + output.ToString();
                 }
-                else if (item.ToString() == "-")
-                {
-                    output = double.Parse(a) - double.Parse(b);
-                    Result.Text = "Ответ: " + output.ToString()
-                }
-                else if (item.ToString() == "*")
-                {
-                    output = double.Parse(a) * double.Parse(b);
-                    Result.Text = "Ответ: " + output;
-                }
-                else if (item.ToString() == "/")
-                {
-                    output = double.Parse(a) / double.Parse(b);
-                    Result.Text = "Ответ: " + output;
-                }
             }
         }
     }
