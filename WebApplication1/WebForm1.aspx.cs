@@ -26,7 +26,7 @@ namespace WebApplication1
                 switch (OperationLB.SelectedItem.Value)
                 {
                     case "+":
-                        Response.Write($"<h1> Answer is <h1> {(a + b)} </h1>");
+                        Response.Redirect("WebForm2.aspx?result=" + (a + b));
                         break;
                     case "-":
                         Response.Write($"<h1> Answer is <h1> {(a - b)} </h1>");
@@ -41,6 +41,30 @@ namespace WebApplication1
             }
             catch
             {
+            }
+        }
+
+        protected void ValFirst_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            try
+            {
+                double.Parse(FirstValueTB.Text);
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
+            }
+        }
+
+        protected void ValSecond_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            try
+            {
+                double.Parse(SecondValueTB.Text);
+            }
+            catch (Exception)
+            {
+                args.IsValid = false;
             }
         }
     }

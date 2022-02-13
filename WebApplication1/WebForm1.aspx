@@ -16,6 +16,16 @@
         .auto-style3 {
             height: 23px;
         }
+        .auto-style4 {
+            text-align: right;
+            height: 39px;
+        }
+        .auto-style5 {
+            height: 39px;
+        }
+        .auto-style6 {
+            text-align: left;
+        }
     </style>
 </head>
 <body>
@@ -28,29 +38,30 @@
                     </td>
                     <td>
                         <asp:TextBox ID="FirstValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="Enter first value" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:CustomValidator ID="ValFirst" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="CustomValidator" OnServerValidate="ValFirst_ServerValidate"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style2">
                         <asp:Label ID="Label2" runat="server" Text="Operation"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style6">
                         <asp:ListBox ID="OperationLB" runat="server" Width="97px">
                             <asp:ListItem>+</asp:ListItem>
                             <asp:ListItem>-</asp:ListItem>
                             <asp:ListItem>*</asp:ListItem>
                             <asp:ListItem>/</asp:ListItem>
                         </asp:ListBox>
+                        <asp:RequiredFieldValidator ID="ValOperation" runat="server" ControlToValidate="OperationLB" ErrorMessage="Select operation" ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">
+                    <td class="auto-style4">
                         <asp:Label ID="Label3" runat="server" Text="Second value"></asp:Label>
                     </td>
-                    <td>
+                    <td class="auto-style5">
                         <asp:TextBox ID="SecondValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="Enter second value" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:CustomValidator ID="ValSecond" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="CustomValidator" OnServerValidate="ValSecond_ServerValidate"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
@@ -64,6 +75,7 @@
                     <td class="auto-style3">
                         <asp:Label ID="Result" runat="server" Text=" "></asp:Label>
                         <asp:Button ID="Calculate" runat="server" BackColor="#33CC33" Height="40px" OnClick="Calculate_Click" Text="Calculate" Width="100px" />
+                        <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="CustomValidator"></asp:CustomValidator>
                     </td>
                 </tr>
             </table>

@@ -42,13 +42,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox FirstValueTB;
 
         /// <summary>
-        /// RequiredFieldValidator1 элемент управления.
+        /// ValFirst элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.CustomValidator ValFirst;
 
         /// <summary>
         /// Label2 элемент управления.
@@ -69,6 +69,15 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.ListBox OperationLB;
 
         /// <summary>
+        /// ValOperation элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValOperation;
+
+        /// <summary>
         /// Label3 элемент управления.
         /// </summary>
         /// <remarks>
@@ -87,13 +96,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox SecondValueTB;
 
         /// <summary>
-        /// RequiredFieldValidator2 элемент управления.
+        /// ValSecond элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.CustomValidator ValSecond;
 
         /// <summary>
         /// isUnsigned элемент управления.
@@ -121,5 +130,14 @@ namespace WebApplication1
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Calculate;
+
+        /// <summary>
+        /// CustomValidator1 элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
     }
 }
