@@ -96,13 +96,13 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
 
         /// <summary>
-        /// Calculate элемент управления.
+        /// isUnsigned элемент управления.
         /// </summary>
         /// <remarks>
         /// Автоматически созданное поле.
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Calculate;
+        protected global::System.Web.UI.WebControls.CheckBox isUnsigned;
 
         /// <summary>
         /// Result элемент управления.
@@ -112,5 +112,14 @@ namespace WebApplication1
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Result;
+
+        /// <summary>
+        /// Calculate элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Calculate;
     }
 }

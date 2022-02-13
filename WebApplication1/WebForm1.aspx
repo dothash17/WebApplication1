@@ -56,13 +56,14 @@
                 <tr>
                     <td>&nbsp;</td>
                     <td>
-                        <asp:Button ID="Calculate" runat="server" BackColor="#33CC33" Height="40px" OnClick="Calculate_Click" Text="Calculate" Width="100px" />
+                        <asp:CheckBox ID="isUnsigned" runat="server" Text="Is unsigned?" />
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style3">&nbsp;</td>
                     <td class="auto-style3">
                         <asp:Label ID="Result" runat="server" Text=" "></asp:Label>
+                        <asp:Button ID="Calculate" runat="server" BackColor="#33CC33" Height="40px" OnClick="Calculate_Click" Text="Calculate" Width="100px" />
                     </td>
                 </tr>
             </table>

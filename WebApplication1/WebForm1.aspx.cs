@@ -16,29 +16,31 @@ namespace WebApplication1
 
         protected void Calculate_Click(object sender, EventArgs e)
         {
-            var a = FirstValueTB.Text;
-            var b = SecondValueTB.Text;
-            var c = OperationLB.Text;
-
-            double output = 0;
-            switch (c.ToString())
+            try
             {
-                case "+":
-                    output = double.Parse(a) + double.Parse(b);
-                    Result.Text = "Ответ: " + output;
-                    break;
-                case "-":
-                    output = double.Parse(a) - double.Parse(b);
-                    Result.Text = "Ответ: " + output;
-                    break;
-                case "*":
-                    output = double.Parse(a) * double.Parse(b);
-                    Result.Text = "Ответ: " + output;
-                    break;
-                case "/":
-                    output = double.Parse(a) / double.Parse(b);
-                    Result.Text = "Ответ: " + output;
-                    break;
+
+                short a = short.Parse(FirstValueTB.Text);
+                float b = float.Parse(SecondValueTB.Text);
+                if (isUnsigned.Checked) a = (short)Convert.ToUInt16(FirstValueTB.Text);
+
+                switch (OperationLB.SelectedItem.Value)
+                {
+                    case "+":
+                        Response.Write($"<h1> Answer is <h1> {(a + b)} </h1>");
+                        break;
+                    case "-":
+                        Response.Write($"<h1> Answer is <h1> {(a - b)} </h1>");
+                        break;
+                    case "*":
+                        Response.Write($"<h1> Answer is <h1> {(a * b)} </h1>");
+                        break;
+                    case "/":
+                        Response.Write($"<h1> Answer is <h1> {(a / b)} </h1>");
+                        break;
+                }
+            }
+            catch
+            {
             }
         }
     }
