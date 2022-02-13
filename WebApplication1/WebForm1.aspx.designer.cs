@@ -42,6 +42,15 @@ namespace WebApplication1
         protected global::System.Web.UI.WebControls.TextBox FirstValueTB;
 
         /// <summary>
+        /// ReqFirstValue элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqFirstValue;
+
+        /// <summary>
         /// Label2 элемент управления.
         /// </summary>
         /// <remarks>
@@ -76,6 +85,15 @@ namespace WebApplication1
         /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox SecondValueTB;
+
+        /// <summary>
+        /// ReqSecondValue элемент управления.
+        /// </summary>
+        /// <remarks>
+        /// Автоматически созданное поле.
+        /// Для изменения переместите объявление поля из файла конструктора в файл кода программной части.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ReqSecondValue;
 
         /// <summary>
         /// Calculate элемент управления.

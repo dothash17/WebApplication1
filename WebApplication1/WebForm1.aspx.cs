@@ -18,15 +18,27 @@ namespace WebApplication1
         {
             var a = FirstValueTB.Text;
             var b = SecondValueTB.Text;
+            var c = OperationLB.Text;
 
             double output = 0;
-            foreach (object item in OperationLB.Items)
+            switch (c.ToString())
             {
-                if (item.ToString() == "+")
-                {
+                case "+":
                     output = double.Parse(a) + double.Parse(b);
-                    Result.Text = "Ответ: " + output.ToString();
-                }
+                    Result.Text = "Ответ: " + output;
+                    break;
+                case "-":
+                    output = double.Parse(a) - double.Parse(b);
+                    Result.Text = "Ответ: " + output;
+                    break;
+                case "*":
+                    output = double.Parse(a) * double.Parse(b);
+                    Result.Text = "Ответ: " + output;
+                    break;
+                case "/":
+                    output = double.Parse(a) / double.Parse(b);
+                    Result.Text = "Ответ: " + output;
+                    break;
             }
         }
     }

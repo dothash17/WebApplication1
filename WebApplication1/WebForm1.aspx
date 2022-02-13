@@ -13,6 +13,9 @@
         .auto-style2 {
             text-align: right;
         }
+        .auto-style3 {
+            height: 23px;
+        }
     </style>
 </head>
 <body>
@@ -25,6 +28,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="FirstValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="ReqFirstValue" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="Enter first value" ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -46,6 +50,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="SecondValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="ReqSecondValue" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="Enter second value" ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -55,8 +60,8 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
-                    <td>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style3">
                         <asp:Label ID="Result" runat="server" Text=" "></asp:Label>
                     </td>
                 </tr>
