@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div style="margin-left:50%"> 
+            <div style="margin-left:47%" class="auto-style8"> 
                 <asp:Menu ID="Menu" runat="server" OnMenuItemClick="Menu_MenuItemClick">
                     <Items>
                         <asp:MenuItem Text="First value" Value="First value"></asp:MenuItem>
@@ -23,6 +23,9 @@
                         <asp:MenuItem Text="Second value" Value="Second value"></asp:MenuItem>
                     </Items>
                 </asp:Menu>
+                <div class="auto-style8">
+                <br />
+                </div>
             </div>
             <asp:MultiView ID="MultiView" runat="server" ActiveViewIndex ="0">
                 <asp:View ID="View1" runat="server">
