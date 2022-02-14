@@ -21,7 +21,6 @@ namespace WebApplication1
 
                 short a = short.Parse(FirstValueTB.Text);
                 float b = float.Parse(SecondValueTB.Text);
-                if (isUnsigned.Checked) a = (short)Convert.ToUInt16(FirstValueTB.Text);
 
                 switch (OperationLB.SelectedItem.Value)
                 {
@@ -65,6 +64,26 @@ namespace WebApplication1
             catch (Exception)
             {
                 args.IsValid = false;
+            }
+        }
+
+        protected void Menu_MenuItemClick(object sender, MenuEventArgs e)
+        {
+            switch (e.Item.Value)
+            {
+                case "First value":
+                    MultiView.ActiveViewIndex = 0;
+                    break;
+                case "Operation":
+                    MultiView.ActiveViewIndex = 1;
+                    break;
+                case "Second value":
+                    MultiView.ActiveViewIndex = 2;
+                    break;
+                default:
+                    MultiView.ActiveViewIndex = 0;
+                    break;
+
             }
         }
     }

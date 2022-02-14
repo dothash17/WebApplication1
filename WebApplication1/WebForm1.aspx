@@ -7,78 +7,60 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            text-align: right;
-        }
-        .auto-style3 {
-            height: 23px;
-        }
-        .auto-style4 {
-            text-align: right;
-            height: 39px;
-        }
-        .auto-style5 {
-            height: 39px;
-        }
-        .auto-style6 {
-            text-align: left;
+        .auto-style8 {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <table class="auto-style1">
-                <tr>
-                    <td class="auto-style2">
+            <div class="auto-style8">
+                <asp:Menu ID="Menu" runat="server" OnMenuItemClick="Menu_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem Text="First value" Value="First value"></asp:MenuItem>
+                        <asp:MenuItem Text="Operation" Value="Operation"></asp:MenuItem>
+                        <asp:MenuItem Text="Second value" Value="Second value"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+            <asp:MultiView ID="MultiView" runat="server" ActiveViewIndex ="0">
+                <asp:View ID="View1" runat="server">
+                    <div class="auto-style8">
                         <asp:Label ID="Label1" runat="server" Text="First value"></asp:Label>
-                    </td>
-                    <td>
                         <asp:TextBox ID="FirstValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
-                        <asp:CustomValidator ID="ValFirst" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="CustomValidator" OnServerValidate="ValFirst_ServerValidate"></asp:CustomValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style2">
+                    </div>
+                </asp:View>
+                <asp:View ID="View2" runat="server">
+                    <div class="auto-style8">
                         <asp:Label ID="Label2" runat="server" Text="Operation"></asp:Label>
-                    </td>
-                    <td class="auto-style6">
                         <asp:ListBox ID="OperationLB" runat="server" Width="97px">
                             <asp:ListItem>+</asp:ListItem>
                             <asp:ListItem>-</asp:ListItem>
                             <asp:ListItem>*</asp:ListItem>
                             <asp:ListItem>/</asp:ListItem>
                         </asp:ListBox>
-                        <asp:RequiredFieldValidator ID="ValOperation" runat="server" ControlToValidate="OperationLB" ErrorMessage="Select operation" ForeColor="Red"></asp:RequiredFieldValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style4">
+                    </div>
+                </asp:View>
+                <asp:View ID="View3" runat="server">
+                    <div class="auto-style8">
                         <asp:Label ID="Label3" runat="server" Text="Second value"></asp:Label>
-                    </td>
-                    <td class="auto-style5">
                         <asp:TextBox ID="SecondValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
-                        <asp:CustomValidator ID="ValSecond" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="CustomValidator" OnServerValidate="ValSecond_ServerValidate"></asp:CustomValidator>
-                    </td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>
-                        <asp:CheckBox ID="isUnsigned" runat="server" Text="Is unsigned?" />
-                    </td>
-                </tr>
-                <tr>
-                    <td class="auto-style3">&nbsp;</td>
-                    <td class="auto-style3">
-                        <asp:Label ID="Result" runat="server" Text=" "></asp:Label>
+                        <br />
                         <asp:Button ID="Calculate" runat="server" BackColor="#33CC33" Height="40px" OnClick="Calculate_Click" Text="Calculate" Width="100px" />
-                    </td>
-                </tr>
-            </table>
+                    </div>
+                </asp:View>
+            </asp:MultiView>
         </div>
+        <p>
+                        <asp:CustomValidator ID="ValFirst" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="Неверные данные или пустое первое значение" OnServerValidate="ValFirst_ServerValidate" ForeColor="Red" ValidateEmptyText="True"></asp:CustomValidator>
+                    </p>
+        <p>
+                        <asp:RequiredFieldValidator ID="ValOperation" runat="server" ControlToValidate="OperationLB" ErrorMessage="Выберите операцию" ForeColor="Red"></asp:RequiredFieldValidator>
+                    </p>
+        <p>
+                    <asp:CustomValidator ID="ValSecond" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="Неверные данные или пустое второе значение" OnServerValidate="ValSecond_ServerValidate" ForeColor="Red" ValidateEmptyText="True"></asp:CustomValidator>
+                    </p>
     </form>
 </body>
 </html>
