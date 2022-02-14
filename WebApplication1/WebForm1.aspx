@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div>
+            <div style="margin-left:50%"> 
                 <asp:Menu ID="Menu" runat="server" OnMenuItemClick="Menu_MenuItemClick">
                     <Items>
                         <asp:MenuItem Text="First value" Value="First value"></asp:MenuItem>
