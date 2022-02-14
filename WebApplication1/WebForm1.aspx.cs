@@ -26,16 +26,16 @@ namespace WebApplication1
                 switch (OperationLB.SelectedItem.Value)
                 {
                     case "+":
-                        Response.Redirect("WebForm2.aspx?result=" + (a + b));
+                        Response.Write($"<h1> Ответ: {(a + b)} </h1>");
                         break;
                     case "-":
-                        Response.Redirect("WebForm2.aspx?result=" + (a - b));
+                        Response.Write($"<h1> Ответ: {(a - b)} </h1>");
                         break;
                     case "*":
-                        Response.Write($"<h1> Ответ: <h1> {(a * b)} </h1>");
+                        Response.Write($"<h1> Ответ: {(a * b)} </h1>");
                         break;
                     case "/":
-                        Response.Write($"<h1> Ответ: <h1> {(a / b)} </h1>");
+                        Response.Write($"<h1> Ответ: {(a / b)} </h1>");
                         break;
                 }
             }
