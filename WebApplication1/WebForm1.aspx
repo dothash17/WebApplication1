@@ -15,7 +15,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <div class="auto-style8">
+            <div>
                 <asp:Menu ID="Menu" runat="server" OnMenuItemClick="Menu_MenuItemClick">
                     <Items>
                         <asp:MenuItem Text="First value" Value="First value"></asp:MenuItem>
@@ -28,13 +28,13 @@
                 <asp:View ID="View1" runat="server">
                     <div class="auto-style8">
                         <asp:Label ID="Label1" runat="server" Text="First value"></asp:Label>
-                        <asp:TextBox ID="FirstValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="FirstValueTB" runat="server"></asp:TextBox>
                     </div>
                 </asp:View>
                 <asp:View ID="View2" runat="server">
                     <div class="auto-style8">
                         <asp:Label ID="Label2" runat="server" Text="Operation"></asp:Label>
-                        <asp:ListBox ID="OperationLB" runat="server" Width="97px">
+                        &nbsp;<asp:ListBox ID="OperationLB" runat="server" Width="87px">
                             <asp:ListItem>+</asp:ListItem>
                             <asp:ListItem>-</asp:ListItem>
                             <asp:ListItem>*</asp:ListItem>
@@ -45,20 +45,21 @@
                 <asp:View ID="View3" runat="server">
                     <div class="auto-style8">
                         <asp:Label ID="Label3" runat="server" Text="Second value"></asp:Label>
-                        <asp:TextBox ID="SecondValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
+                        &nbsp;<asp:TextBox ID="SecondValueTB" runat="server"></asp:TextBox>
+                        <br />
                         <br />
                         <asp:Button ID="Calculate" runat="server" BackColor="#33CC33" Height="40px" OnClick="Calculate_Click" Text="Calculate" Width="100px" />
                     </div>
                 </asp:View>
             </asp:MultiView>
         </div>
-        <p>
+        <p class="auto-style8">
                         <asp:CustomValidator ID="ValFirst" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="Неверные данные или пустое первое значение" OnServerValidate="ValFirst_ServerValidate" ForeColor="Red" ValidateEmptyText="True"></asp:CustomValidator>
                     </p>
-        <p>
+        <p class="auto-style8">
                         <asp:RequiredFieldValidator ID="ValOperation" runat="server" ControlToValidate="OperationLB" ErrorMessage="Выберите операцию" ForeColor="Red"></asp:RequiredFieldValidator>
                     </p>
-        <p>
+        <p class="auto-style8">
                     <asp:CustomValidator ID="ValSecond" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="Неверные данные или пустое второе значение" OnServerValidate="ValSecond_ServerValidate" ForeColor="Red" ValidateEmptyText="True"></asp:CustomValidator>
                     </p>
     </form>
