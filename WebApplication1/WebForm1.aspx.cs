@@ -29,13 +29,13 @@ namespace WebApplication1
                         Response.Redirect("WebForm2.aspx?result=" + (a + b));
                         break;
                     case "-":
-                        Response.Write($"<h1> Answer is <h1> {(a - b)} </h1>");
+                        Response.Redirect("WebForm2.aspx?result=" + (a - b));
                         break;
                     case "*":
-                        Response.Write($"<h1> Answer is <h1> {(a * b)} </h1>");
+                        Response.Write($"<h1> Ответ: <h1> {(a * b)} </h1>");
                         break;
                     case "/":
-                        Response.Write($"<h1> Answer is <h1> {(a / b)} </h1>");
+                        Response.Write($"<h1> Ответ: <h1> {(a / b)} </h1>");
                         break;
                 }
             }

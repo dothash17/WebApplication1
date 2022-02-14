@@ -75,7 +75,6 @@
                     <td class="auto-style3">
                         <asp:Label ID="Result" runat="server" Text=" "></asp:Label>
                         <asp:Button ID="Calculate" runat="server" BackColor="#33CC33" Height="40px" OnClick="Calculate_Click" Text="Calculate" Width="100px" />
-                        <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="CustomValidator"></asp:CustomValidator>
                     </td>
                 </tr>
             </table>
