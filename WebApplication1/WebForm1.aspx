@@ -38,7 +38,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="FirstValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
-                        <asp:CustomValidator ID="ValFirst" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="CustomValidator" OnServerValidate="ValFirst_ServerValidate"></asp:CustomValidator>
+                        <asp:CustomValidator ID="ValFirst" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="Неверные данные или пустое первое значение" OnServerValidate="ValFirst_ServerValidate" ForeColor="Red"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
@@ -52,7 +52,7 @@
                             <asp:ListItem>*</asp:ListItem>
                             <asp:ListItem>/</asp:ListItem>
                         </asp:ListBox>
-                        <asp:RequiredFieldValidator ID="ValOperation" runat="server" ControlToValidate="OperationLB" ErrorMessage="Select operation" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="ValOperation" runat="server" ControlToValidate="OperationLB" ErrorMessage="Выберите операцию" ForeColor="Red"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -61,7 +61,7 @@
                     </td>
                     <td class="auto-style5">
                         <asp:TextBox ID="SecondValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
-                        <asp:CustomValidator ID="ValSecond" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="CustomValidator" OnServerValidate="ValSecond_ServerValidate"></asp:CustomValidator>
+                        <asp:CustomValidator ID="ValSecond" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="Неверные данные или пустое второе значение" OnServerValidate="ValSecond_ServerValidate" ForeColor="Red"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
