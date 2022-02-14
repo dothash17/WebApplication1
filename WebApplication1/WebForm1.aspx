@@ -38,7 +38,7 @@
                     </td>
                     <td>
                         <asp:TextBox ID="FirstValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
-                        <asp:CustomValidator ID="ValFirst" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="Неверные данные или пустое первое значение" OnServerValidate="ValFirst_ServerValidate" ForeColor="Red"></asp:CustomValidator>
+                        <asp:CustomValidator ID="ValFirst" runat="server" ControlToValidate="FirstValueTB" ErrorMessage="Неверные данные или пустое первое значение" OnServerValidate="ValFirst_ServerValidate" ForeColor="Red" ValidateEmptyText="True"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
@@ -61,7 +61,7 @@
                     </td>
                     <td class="auto-style5">
                         <asp:TextBox ID="SecondValueTB" runat="server" Height="25px" Width="120px"></asp:TextBox>
-                        <asp:CustomValidator ID="ValSecond" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="Неверные данные или пустое второе значение" OnServerValidate="ValSecond_ServerValidate" ForeColor="Red"></asp:CustomValidator>
+                        <asp:CustomValidator ID="ValSecond" runat="server" ControlToValidate="SecondValueTB" ErrorMessage="Неверные данные или пустое второе значение" OnServerValidate="ValSecond_ServerValidate" ForeColor="Red" ValidateEmptyText="True"></asp:CustomValidator>
                     </td>
                 </tr>
                 <tr>
