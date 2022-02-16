@@ -25,16 +25,20 @@ namespace WebApplication1
                 switch (OperationLB.SelectedItem.Value)
                 {
                     case "+":
-                        Response.Redirect("WebForm2.aspx?result=" + (a + b));
+                        Response.Cookies.Add(new HttpCookie("result", (a + b).ToString()));
+                        Response.Redirect("WebForm2.aspx");
                         break;
                     case "-":
-                        Response.Redirect("WebForm2.aspx?result=" + (a - b));
+                        Response.Cookies.Add(new HttpCookie("result", (a - b).ToString()));
+                        Response.Redirect("WebForm2.aspx");
                         break;
                     case "*":
-                        Response.Redirect("WebForm2.aspx?result=" + (a * b));
+                        Response.Cookies.Add(new HttpCookie("result", (a * b).ToString()));
+                        Response.Redirect("WebForm2.aspx");
                         break;
                     case "/":
-                        Response.Redirect("WebForm2.aspx?result=" + (a / b));
+                        Response.Cookies.Add(new HttpCookie("result", (a / b).ToString()));
+                        Response.Redirect("WebForm2.aspx");
                         break;
                 }
             }

@@ -10,7 +10,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <h1>Ответ: <% Response.Write(Request.QueryString["result"]); %></h1>
+            <h1>Ответ: <% Response.Write(Request.Cookies["result"].Value); %></h1>
         </div>
     </form>
 </body>
