@@ -18,7 +18,7 @@ namespace WebApplication1
         {
             try
             {
-
+                
                 short a = short.Parse(FirstValueTB.Text);
                 float b = float.Parse(SecondValueTB.Text);
                 if (isUnsigned.Checked) a = (short)Convert.ToUInt16(FirstValueTB.Text);
@@ -26,15 +26,19 @@ namespace WebApplication1
                 switch (OperationLB.SelectedItem.Value)
                 {
                     case "+":
+                        Response.Cookies.Add(new HttpCookie("result", (a + b).ToString()));
                         Response.Redirect("Web2.aspx?result=" + (a + b));
                         break;
                     case "-":
+                        Response.Cookies.Add(new HttpCookie("result", (a - b).ToString()));
                         Response.Redirect("Web2.aspx?result=" + (a - b));
                         break;
                     case "*":
+                        Response.Cookies.Add(new HttpCookie("result", (a * b).ToString()));
                         Response.Write($"<h1> Ответ: {(a * b)} </h1>");
                         break;
                     case "/":
+                        Response.Cookies.Add(new HttpCookie("result", (a / b).ToString()));
                         Response.Write($"<h1> Ответ: {(a / b)} </h1>");
                         break;
                 }
