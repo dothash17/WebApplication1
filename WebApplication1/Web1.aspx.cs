@@ -27,19 +27,19 @@ namespace WebApplication1
                 {
                     case "+":
                         Response.Cookies.Add(new HttpCookie("result", (a + b).ToString()));
-                        Response.Redirect("Web2.aspx?result=" + (a + b));
+                        Response.Redirect("Web2.aspx");
                         break;
                     case "-":
                         Response.Cookies.Add(new HttpCookie("result", (a - b).ToString()));
-                        Response.Redirect("Web2.aspx?result=" + (a - b));
+                        Response.Redirect("Web2.aspx");
                         break;
                     case "*":
                         Response.Cookies.Add(new HttpCookie("result", (a * b).ToString()));
-                        Response.Write($"<h1> Ответ: {(a * b)} </h1>");
+                        Response.Redirect("Web2.aspx");
                         break;
                     case "/":
                         Response.Cookies.Add(new HttpCookie("result", (a / b).ToString()));
-                        Response.Write($"<h1> Ответ: {(a / b)} </h1>");
+                        Response.Redirect("Web2.aspx");
                         break;
                 }
             }
